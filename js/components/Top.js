@@ -8,7 +8,7 @@ const { Header } = Layout;
 const Top = () => (
 	<Header>
 	    <Login></Login>
-    	<a href="#" className="logo ant-col-md-5"><img src="../img/2.jpg" alt="logo" title="logo"/></a>
+    	<a href="#" className="logo ant-col-md-5"><img src="../img/logo.png" alt="logo" title="logo"/></a>
     	<MenuList></MenuList>
 	</Header>
 )

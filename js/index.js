@@ -8,9 +8,6 @@ import Top from './components/Top';
 import Bottom from './components/Bottom';
 import Main from './components/Main';
 import Msg from './components/Msg';
-import todoApp from './reducers/index';
-
-let store = createStore(todoApp);
 
 const { Content } = Layout;
 class App extends React.Component{
@@ -28,15 +25,13 @@ class App extends React.Component{
 }
 
 ReactDOM.render(
-	<Provider store={store}>
-		<Router history={hashHistory}>
-			<Route path="/" component={ App }>
-				<IndexRoute component={ Main } />
-	            <Route path="index" component={ Main } />
-	            <Route path="msg/:id" component={ Msg } />
-	            <Route path="news" component={ Msg } />
-	        </Route>
-		</Router>
-	</Provider>,
+	<Router history={hashHistory}>
+		<Route path="/" component={ App }>
+			<IndexRoute component={ Main } />
+            <Route path="index" component={ Main } />
+            <Route path="msg/:id" component={ Msg } />
+            <Route path="news" component={ Msg } />
+        </Route>
+	</Router>,
 	document.getElementById('app')
 );
